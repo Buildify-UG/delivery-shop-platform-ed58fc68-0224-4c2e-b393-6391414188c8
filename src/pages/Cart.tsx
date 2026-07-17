@@ -9,14 +9,21 @@ export default function Cart() {
 
   if (cart.length === 0) {
     return (
-      <div className="min-h-screen bg-background">
+      <div 
+        className="min-h-screen bg-cover bg-center"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=1200&h=800&fit=crop)',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
         <Header cartItemCount={getItemCount()} />
 
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="text-center">
-            <ShoppingBag className="w-16 h-16 mx-auto text-muted-foreground mb-4 opacity-50" />
-            <h1 className="text-3xl font-bold text-foreground mb-2">Your Cart is Empty</h1>
-            <p className="text-muted-foreground mb-8">Start adding items to your cart</p>
+            <ShoppingBag className="w-16 h-16 mx-auto text-white mb-4 opacity-80" />
+            <h1 className="text-3xl font-bold text-white mb-2">Your Cart is Empty</h1>
+            <p className="text-gray-200 mb-8">Start adding items to your cart</p>
             <Link to="/catalog">
               <Button size="lg">
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -30,10 +37,17 @@ export default function Cart() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div 
+      className="min-h-screen bg-cover bg-center"
+      style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200&h=800&fit=crop)',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/60"></div>
       <Header cartItemCount={getItemCount()} />
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="mb-6">
           <Link to="/catalog" className="inline-flex items-center text-primary hover:underline">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -151,6 +165,7 @@ export default function Cart() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -38,10 +38,17 @@ export default function Catalog() {
       <Header cartItemCount={getItemCount()} />
 
       {/* Page Header */}
-      <div className="bg-card border-b border-border py-8">
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold text-foreground mb-2">Our Menu</h1>
-          <p className="text-muted-foreground">Browse and order your favorite items</p>
+      <div 
+        className="border-b border-border py-8 relative bg-cover bg-center"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1504674900968-f712b834d870?w=1200&h=400&fit=crop)',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-3xl font-bold text-white mb-2">Our Menu</h1>
+          <p className="text-gray-200">Browse and order your favorite items</p>
         </div>
       </div>
 

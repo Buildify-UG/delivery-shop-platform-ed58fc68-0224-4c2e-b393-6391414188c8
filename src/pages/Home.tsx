@@ -22,10 +22,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Header cartItemCount={getItemCount()} />
+      <div className="relative">
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-12 md:py-20">
-        <div className="container mx-auto px-4">
+      <section 
+        className="bg-cover bg-center text-primary-foreground py-12 md:py-20 relative"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1555939594-58d7cb561e1e?w=1200&h=600&fit=crop)',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -153,6 +161,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 }

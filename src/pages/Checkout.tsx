@@ -38,10 +38,17 @@ export default function Checkout() {
 
   if (cart.length === 0 && !orderComplete) {
     return (
-      <div className="min-h-screen bg-background">
+      <div 
+        className="min-h-screen bg-cover bg-center"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200&h=800&fit=crop)',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
         <Header cartItemCount={getItemCount()} />
-        <div className="container mx-auto px-4 py-16 text-center">
-          <p className="text-lg text-muted-foreground mb-4">Your cart is empty</p>
+        <div className="container mx-auto px-4 py-16 text-center relative z-10">
+          <p className="text-lg text-white mb-4">Your cart is empty</p>
           <Button onClick={() => navigate('/catalog')}>Continue Shopping</Button>
         </div>
       </div>
@@ -133,10 +140,17 @@ export default function Checkout() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div 
+      className="min-h-screen bg-cover bg-center"
+      style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200&h=800&fit=crop)',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/60"></div>
       <Header cartItemCount={getItemCount()} />
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 relative z-10">
         <button
           onClick={() => navigate('/cart')}
           className="inline-flex items-center text-primary hover:underline mb-6"
@@ -316,6 +330,7 @@ export default function Checkout() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
