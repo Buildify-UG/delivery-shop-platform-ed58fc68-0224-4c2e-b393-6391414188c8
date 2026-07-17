@@ -28,10 +28,10 @@ export const Header = ({ cartItemCount }: HeaderProps) => {
               Home
             </Link>
             <Link to="/catalog" className="hover:opacity-80 transition-opacity">
-              Menu
+              Services
             </Link>
             <Link to="/tracking" className="hover:opacity-80 transition-opacity">
-              Track Order
+              Track Shipment
             </Link>
           </nav>
 
@@ -69,10 +69,10 @@ export const Header = ({ cartItemCount }: HeaderProps) => {
               Home
             </Link>
             <Link to="/catalog" className="hover:opacity-80 transition-opacity">
-              Menu
+              Services
             </Link>
             <Link to="/tracking" className="hover:opacity-80 transition-opacity">
-              Track Order
+              Track Shipment
             </Link>
           </nav>
         )}
