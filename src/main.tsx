@@ -3,6 +3,7 @@ import App from './App.tsx'
 import './index.css'
 import ErrorBoundary from './components/ErrorBoundary.tsx';
 
+// FoodHub Delivery Application - All systems ready
 createRoot(document.getElementById("root")!).render(
     <ErrorBoundary>
         <App />
