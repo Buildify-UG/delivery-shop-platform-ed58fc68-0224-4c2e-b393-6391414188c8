@@ -118,24 +118,3 @@ export const createOrderTracking = async (
   if (error) throw error;
   return data;
 };
-
-export const createOrderTracking = async (
-  orderId: string,
-  status: string,
-  statusMessage: string
-) => {
-  const { data, error } = await supabase
-    .from('order_tracking')
-    .insert([
-      {
-        order_id: orderId,
-        status,
-        status_message: statusMessage,
-      },
-    ])
-    .select()
-    .single();
-
-  if (error) throw error;
-  return data;
-};
