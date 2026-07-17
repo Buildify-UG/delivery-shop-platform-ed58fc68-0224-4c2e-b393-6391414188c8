@@ -25,6 +25,16 @@ export interface Order {
   total_amount: number;
   status: string;
   created_at: string;
+  estimated_delivery?: string;
+  tracking_number?: string;
+}
+
+export interface OrderTracking {
+  id: string;
+  order_id: string;
+  status: string;
+  status_message: string;
+  timestamp: string;
 }
 
 export interface OrderItem {

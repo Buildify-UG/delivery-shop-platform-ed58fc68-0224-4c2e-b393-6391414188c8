@@ -86,3 +86,35 @@ export const fetchOrderItems = async (orderId: string) => {
   if (error) throw error;
   return data;
 };
+
+export const fetchOrderTracking = async (orderId: string) => {
+  const { data, error } = await supabase
+    .from('order_tracking')
+    .select('*')
+    .eq('order_id', orderId)
+    .order('timestamp', { ascending: false });
+
+  if (error) throw error;
+  return data;
+};
+
+export const createOrderTracking = async (
+  orderId: string,
+  status: string,
+  statusMessage: string
+) => {
+  const { data, error } = await supabase
+    .from('order_tracking')
+    .insert([
+      {
+        order_id: orderId,
+        status,
+        status_message: statusMessage,
+      },
+    ])
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data;
+};
