@@ -10,7 +10,7 @@ import Checkout from "./pages/Checkout";
 import Tracking from "./pages/Tracking";
 import NotFound from "./pages/NotFound";
 
-// FoodHub: Delivery website with product catalog, shopping cart, checkout, and real-time package tracking with beautiful delivery backgrounds
+// QuickShip: Package delivery platform with shipping services, cart, checkout, and real-time tracking like USPS/FedEx
 const queryClient = new QueryClient();
 
 const App = () => (
