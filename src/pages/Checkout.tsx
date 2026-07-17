@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useCart } from '@/hooks/useCart';
-import { createOrder, createOrderItems } from '@/lib/supabase';
+import { createOrder, createOrderItems, createOrderTracking } from '@/lib/supabase';
 import { Loader2, ArrowLeft, CheckCircle } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -73,6 +73,13 @@ export default function Checkout() {
         }))
       );
 
+      // Create initial tracking entry
+      await createOrderTracking(
+        order.id,
+        'confirmed',
+        'Your order has been confirmed and is being prepared.'
+      );
+
       setOrderId(order.id);
       setOrderComplete(true);
       clearCart();
@@ -102,8 +109,17 @@ export default function Checkout() {
               <p className="font-mono text-sm text-foreground break-all">{orderId}</p>
             </div>
 
+            <p className="text-sm text-muted-foreground mb-6">
+              You can track your order using the order ID above.
+            </p>
+
             <div className="space-y-4">
-              <Button onClick={() => navigate('/')} className="w-full">
+              <Button asChild className="w-full">
+                <Link to={`/tracking?id=${orderId}`}>
+                  Track Order
+                </Link>
+              </Button>
+              <Button onClick={() => navigate('/')} variant="outline" className="w-full">
                 Back to Home
               </Button>
               <Button onClick={() => navigate('/catalog')} variant="outline" className="w-full">
