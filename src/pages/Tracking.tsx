@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/Header';
 import { fetchOrderById, fetchOrderTracking, fetchOrderItems } from '@/lib/supabase';
-import { Order, OrderTracking, OrderItem } from '@/types';
+import { Order, OrderTracking, OrderItem, Product } from '@/types';
 import { CheckCircle2, Clock, Truck, MapPin, AlertCircle } from 'lucide-react';
 
 const Tracking = () => {
