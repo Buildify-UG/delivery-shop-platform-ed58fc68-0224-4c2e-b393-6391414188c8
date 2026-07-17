@@ -17,9 +17,9 @@ export const Header = ({ cartItemCount }: HeaderProps) => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 font-bold text-xl">
             <div className="w-8 h-8 bg-primary-foreground rounded-full flex items-center justify-center">
-              <span className="text-primary font-bold">🚚</span>
+              <span className="text-primary font-bold">📦</span>
             </div>
-            <span>FoodHub</span>
+            <span>QuickShip</span>
           </Link>
 
           {/* Desktop Navigation */}

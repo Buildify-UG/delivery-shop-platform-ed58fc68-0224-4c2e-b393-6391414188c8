@@ -22,7 +22,7 @@ export default function Cart() {
           <div className="text-center">
             <ShoppingBag className="w-16 h-16 mx-auto text-white mb-4 opacity-80" />
             <h1 className="text-3xl font-bold text-white mb-2">Your Cart is Empty</h1>
-            <p className="text-gray-200 mb-8">Start adding items to your cart</p>
+            <p className="text-gray-200 mb-8">Start adding shipping services to your cart</p>
             <Link to="/catalog">
               <Button size="lg">
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -59,7 +59,7 @@ export default function Cart() {
           <div className="lg:col-span-2">
             <div className="bg-card border border-border rounded-lg overflow-hidden">
               <div className="p-6 border-b border-border">
-                <h1 className="text-2xl font-bold text-foreground">Shopping Cart</h1>
+                <h1 className="text-2xl font-bold text-foreground">Shipping Cart</h1>
                 <p className="text-sm text-muted-foreground mt-1">
                   {cart.length} item{cart.length !== 1 ? 's' : ''}
                 </p>

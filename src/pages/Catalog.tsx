@@ -45,8 +45,8 @@ export default function Catalog() {
         }}
       >
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold text-white mb-2">Our Menu</h1>
-          <p className="text-gray-200">Browse and order your favorite items</p>
+          <h1 className="text-3xl font-bold text-white mb-2">Shipping Services</h1>
+          <p className="text-gray-200">Choose the perfect shipping option for your package</p>
         </div>
       </div>
 

@@ -105,9 +105,9 @@ export default function Checkout() {
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-md mx-auto bg-card border border-border rounded-lg p-8 text-center">
             <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-foreground mb-2">Order Confirmed!</h1>
+            <h1 className="text-2xl font-bold text-foreground mb-2">Shipment Confirmed!</h1>
             <p className="text-muted-foreground mb-6">
-              Thank you for your order. Your food will be delivered soon.
+              Thank you for your shipment. Your package will be delivered soon.
             </p>
 
             <div className="bg-muted/50 rounded-lg p-4 mb-6 text-left">
@@ -116,13 +116,13 @@ export default function Checkout() {
             </div>
 
             <p className="text-sm text-muted-foreground mb-6">
-              You can track your order using the order ID above.
+              You can track your shipment using the tracking ID above.
             </p>
 
             <div className="space-y-4">
               <Button asChild className="w-full">
                 <Link to={`/tracking?id=${orderId}`}>
-                  Track Order
+                  Track Shipment
                 </Link>
               </Button>
               <Button onClick={() => navigate('/')} variant="outline" className="w-full">
@@ -161,12 +161,12 @@ export default function Checkout() {
           {/* Checkout Form */}
           <div className="lg:col-span-2">
             <div className="bg-card border border-border rounded-lg p-6">
-              <h1 className="text-2xl font-bold text-foreground mb-6">Delivery Information</h1>
+              <h1 className="text-2xl font-bold text-foreground mb-6">Shipping Information</h1>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Personal Information */}
                 <div>
-                  <h3 className="font-semibold text-foreground mb-4">Personal Details</h3>
+                  <h3 className="font-semibold text-foreground mb-4">Sender Information</h3>
                   <div className="space-y-4">
                     <div>
                       <label className="text-sm font-medium text-foreground block mb-2">
@@ -221,7 +221,7 @@ export default function Checkout() {
 
                 {/* Delivery Address */}
                 <div className="border-t border-border pt-6">
-                  <h3 className="font-semibold text-foreground mb-4">Delivery Address</h3>
+                  <h3 className="font-semibold text-foreground mb-4">Recipient Address</h3>
                   <div className="space-y-4">
                     <div>
                       <label className="text-sm font-medium text-foreground block mb-2">
@@ -282,7 +282,7 @@ export default function Checkout() {
                   className="w-full"
                 >
                   {isSubmitting && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
-                  {isSubmitting ? 'Processing...' : 'Place Order'}
+                  {isSubmitting ? 'Processing...' : 'Ship Package'}
                 </Button>
               </form>
             </div>
@@ -291,7 +291,7 @@ export default function Checkout() {
           {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="bg-card border border-border rounded-lg p-6 sticky top-20">
-              <h2 className="text-xl font-bold text-foreground mb-6">Order Summary</h2>
+              <h2 className="text-xl font-bold text-foreground mb-6">Shipping Summary</h2>
 
               <div className="space-y-3 mb-6 pb-6 border-b border-border max-h-64 overflow-y-auto">
                 {cart.map((item) => (

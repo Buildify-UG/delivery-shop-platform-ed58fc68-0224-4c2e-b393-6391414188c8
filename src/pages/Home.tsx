@@ -36,19 +36,19 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Delicious Food, Fast Delivery
+                Reliable Package Delivery
               </h1>
               <p className="text-lg opacity-90 mb-6">
-                Order your favorite meals and get them delivered hot and fresh to your door in 30 minutes or less.
+                Ship your packages with confidence. Fast, secure, and affordable delivery solutions for all your shipping needs.
               </p>
               <Link to="/catalog">
                 <Button size="lg" variant="secondary">
-                  Order Now
+                  Ship Now
                 </Button>
               </Link>
             </div>
             <div className="text-center">
-              <div className="text-8xl">🍕</div>
+              <div className="text-8xl">📦</div>
             </div>
           </div>
         </div>
@@ -59,19 +59,19 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl mb-3">⚡</div>
-              <h3 className="font-semibold text-lg mb-2">Fast Delivery</h3>
-              <p className="text-muted-foreground">Get your food delivered within 30 minutes</p>
+              <div className="text-4xl mb-3">🚚</div>
+              <h3 className="font-semibold text-lg mb-2">Fast Shipping</h3>
+              <p className="text-muted-foreground">Multiple shipping speeds to fit your timeline</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl mb-3">👨‍🍳</div>
-              <h3 className="font-semibold text-lg mb-2">Fresh Quality</h3>
-              <p className="text-muted-foreground">Prepared by expert chefs with premium ingredients</p>
+              <div className="text-4xl mb-3">🔒</div>
+              <h3 className="font-semibold text-lg mb-2">Secure Delivery</h3>
+              <p className="text-muted-foreground">Real-time tracking and insurance protection</p>
             </div>
             <div className="text-center">
               <div className="text-4xl mb-3">💰</div>
-              <h3 className="font-semibold text-lg mb-2">Great Prices</h3>
-              <p className="text-muted-foreground">Best deals and discounts on all items</p>
+              <h3 className="font-semibold text-lg mb-2">Affordable Rates</h3>
+              <p className="text-muted-foreground">Competitive pricing for all package sizes</p>
             </div>
           </div>
         </div>
@@ -82,8 +82,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-2">Featured Menu</h2>
-              <p className="text-muted-foreground">Check out our popular items</p>
+              <h2 className="text-3xl font-bold text-foreground mb-2">Popular Shipping Services</h2>
+              <p className="text-muted-foreground">Choose the right shipping option for your needs</p>
             </div>
             <Link to="/catalog">
               <Button variant="outline">View All</Button>
@@ -111,11 +111,11 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Order?</h2>
-          <p className="mb-6 text-lg opacity-90">Browse our full menu and place your order today</p>
+          <h2 className="text-3xl font-bold mb-4">Ready to Ship?</h2>
+          <p className="mb-6 text-lg opacity-90">Explore all our shipping options and send your package today</p>
           <Link to="/catalog">
             <Button size="lg" variant="secondary">
-              Browse Menu
+              Browse Services
             </Button>
           </Link>
         </div>
@@ -128,22 +128,22 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4 text-foreground">About Us</h4>
               <p className="text-sm text-muted-foreground">
-                FoodHub is your go-to platform for fast, reliable food delivery with quality guaranteed.
+                QuickShip is your trusted platform for reliable package delivery with real-time tracking and competitive rates.
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4 text-foreground">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li><Link to="/" className="text-muted-foreground hover:text-foreground">Home</Link></li>
-                <li><Link to="/catalog" className="text-muted-foreground hover:text-foreground">Menu</Link></li>
+                <li><Link to="/catalog" className="text-muted-foreground hover:text-foreground">Services</Link></li>
                 <li><Link to="/cart" className="text-muted-foreground hover:text-foreground">Cart</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4 text-foreground">Contact</h4>
               <p className="text-sm text-muted-foreground">
-                Email: info@foodhub.com<br />
-                Phone: 1-800-FOOD-HUB
+                Email: support@quickship.com<br />
+                Phone: 1-800-QUICKSHIP
               </p>
             </div>
             <div>
@@ -151,12 +151,12 @@ export default function Home() {
               <div className="flex gap-4">
                 <a href="#" className="text-muted-foreground hover:text-foreground">Facebook</a>
                 <a href="#" className="text-muted-foreground hover:text-foreground">Twitter</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground">Instagram</a>
+                <a href="#" className="text-muted-foreground hover:text-foreground">LinkedIn</a>
               </div>
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 FoodHub. All rights reserved.</p>
+            <p>&copy; 2024 QuickShip. All rights reserved.</p>
           </div>
         </div>
       </footer>

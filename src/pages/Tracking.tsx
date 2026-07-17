@@ -104,26 +104,26 @@ const Tracking = () => {
       <Header cartItemCount={0} />
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Track Your Order</h1>
+          <h1 className="text-3xl font-bold mb-8 text-white">Track Your Shipment</h1>
 
           {/* Search Form */}
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>Enter Order ID</CardTitle>
+              <CardTitle>Enter Tracking ID</CardTitle>
               <CardDescription>
-                Find your order using the order ID from your confirmation email
+                Find your shipment using the tracking ID from your confirmation email
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSearch} className="flex gap-2">
                 <Input
-                  placeholder="Enter order ID..."
+                  placeholder="Enter tracking ID..."
                   value={orderId}
                   onChange={(e) => setOrderId(e.target.value)}
                   className="flex-1"
                 />
                 <Button type="submit" disabled={loading}>
-                  {loading ? 'Searching...' : 'Track'}
+                  {loading ? 'Searching...' : 'Track Shipment'}
                 </Button>
               </form>
             </CardContent>
@@ -149,9 +149,9 @@ const Tracking = () => {
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <div>
-                      <CardTitle>Order #{order.id.slice(0, 8).toUpperCase()}</CardTitle>
+                      <CardTitle>Shipment #{order.id.slice(0, 8).toUpperCase()}</CardTitle>
                       <CardDescription>
-                        Placed on {new Date(order.created_at).toLocaleDateString()}
+                        Shipped on {new Date(order.created_at).toLocaleDateString()}
                       </CardDescription>
                     </div>
                     <Badge className={getStatusColor(order.status)}>
@@ -162,7 +162,7 @@ const Tracking = () => {
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <p className="text-sm text-muted-foreground">Customer</p>
+                      <p className="text-sm text-muted-foreground">Recipient</p>
                       <p className="font-semibold">{order.customer_name}</p>
                     </div>
                     <div>
@@ -260,8 +260,8 @@ const Tracking = () => {
 
           {!order && !error && !loading && (
             <div className="text-center py-12">
-              <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">Enter an order ID to track your delivery</p>
+              <MapPin className="w-12 h-12 text-white mx-auto mb-4" />
+              <p className="text-white">Enter a tracking ID to track your shipment</p>
             </div>
           )}
         </div>
