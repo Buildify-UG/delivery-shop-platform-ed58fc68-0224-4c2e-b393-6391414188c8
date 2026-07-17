@@ -12,14 +12,13 @@ export default function Cart() {
       <div 
         className="min-h-screen bg-cover bg-center"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=1200&h=800&fit=crop)',
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=1200&h=800&fit=crop)',
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
         <Header cartItemCount={getItemCount()} />
 
-        <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <ShoppingBag className="w-16 h-16 mx-auto text-white mb-4 opacity-80" />
             <h1 className="text-3xl font-bold text-white mb-2">Your Cart is Empty</h1>
@@ -165,7 +164,6 @@ export default function Cart() {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }

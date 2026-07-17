@@ -97,13 +97,12 @@ const Tracking = () => {
     <div 
       className="min-h-screen bg-cover bg-center"
       style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1578519603510-481e80a772b8?w=1200&h=800&fit=crop)',
+        backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1578519603510-481e80a772b8?w=1200&h=800&fit=crop)',
         backgroundAttachment: 'fixed'
       }}
     >
-      <div className="absolute inset-0 bg-black/60"></div>
       <Header cartItemCount={0} />
-      <div className="container mx-auto px-4 py-8 relative z-10">
+      <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Track Your Order</h1>
 
@@ -267,7 +266,6 @@ const Tracking = () => {
           )}
         </div>
       </div>
-    </div>
     </div>
   );
 };

@@ -36,17 +36,15 @@ export default function Catalog() {
   return (
     <div className="min-h-screen bg-background">
       <Header cartItemCount={getItemCount()} />
-      <div className="relative">
       {/* Page Header */}
       <div 
-        className="border-b border-border py-8 relative bg-cover bg-center"
+        className="border-b border-border py-8 bg-cover bg-center"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1504674900968-f712b834d870?w=1200&h=400&fit=crop)',
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1504674900968-f712b834d870?w=1200&h=400&fit=crop)',
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-white mb-2">Our Menu</h1>
           <p className="text-gray-200">Browse and order your favorite items</p>
         </div>
@@ -160,7 +158,6 @@ export default function Catalog() {
             )}
           </div>
         </div>
-      </div>
       </div>
     </div>
   );

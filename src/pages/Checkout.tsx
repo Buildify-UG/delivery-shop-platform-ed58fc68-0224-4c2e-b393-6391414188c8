@@ -41,13 +41,12 @@ export default function Checkout() {
       <div 
         className="min-h-screen bg-cover bg-center"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200&h=800&fit=crop)',
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200&h=800&fit=crop)',
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
         <Header cartItemCount={getItemCount()} />
-        <div className="container mx-auto px-4 py-16 text-center relative z-10">
+        <div className="container mx-auto px-4 py-16 text-center">
           <p className="text-lg text-white mb-4">Your cart is empty</p>
           <Button onClick={() => navigate('/catalog')}>Continue Shopping</Button>
         </div>
@@ -143,14 +142,13 @@ export default function Checkout() {
     <div 
       className="min-h-screen bg-cover bg-center"
       style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200&h=800&fit=crop)',
+        backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200&h=800&fit=crop)',
         backgroundAttachment: 'fixed'
       }}
     >
-      <div className="absolute inset-0 bg-black/60"></div>
       <Header cartItemCount={getItemCount()} />
 
-      <div className="container mx-auto px-4 py-8 relative z-10">
+      <div className="container mx-auto px-4 py-8">
         <button
           onClick={() => navigate('/cart')}
           className="inline-flex items-center text-primary hover:underline mb-6"
@@ -330,7 +328,6 @@ export default function Checkout() {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
