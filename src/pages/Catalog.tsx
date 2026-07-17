@@ -157,3 +157,5 @@ export default function Catalog() {
     </div>
   );
 }
+
+export default Catalog;

@@ -319,3 +319,5 @@ export default function Checkout() {
     </div>
   );
 }
+
+export default Checkout;
