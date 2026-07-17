@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/Header';
 import { fetchOrderById, fetchOrderTracking, fetchOrderItems } from '@/lib/supabase';
-import { Order, OrderTracking, OrderItem, Product } from '@/types';
+import { Order, OrderTracking, OrderItem } from '@/types';
 import { CheckCircle2, Clock, Truck, MapPin, AlertCircle } from 'lucide-react';
 
 const Tracking = () => {
@@ -95,7 +95,7 @@ const Tracking = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header cartItemCount={0} />
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Track Your Order</h1>

@@ -71,8 +71,8 @@ export const Header = ({ cartItemCount }: HeaderProps) => {
             <Link to="/catalog" className="hover:opacity-80 transition-opacity">
               Menu
             </Link>
-            <Link to="/about" className="hover:opacity-80 transition-opacity">
-              About
+            <Link to="/tracking" className="hover:opacity-80 transition-opacity">
+              Track Order
             </Link>
           </nav>
         )}
