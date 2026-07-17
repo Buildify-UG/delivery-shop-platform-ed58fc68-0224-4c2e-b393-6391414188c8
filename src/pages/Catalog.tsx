@@ -36,7 +36,7 @@ export default function Catalog() {
   return (
     <div className="min-h-screen bg-background">
       <Header cartItemCount={getItemCount()} />
-
+      <div className="relative">
       {/* Page Header */}
       <div 
         className="border-b border-border py-8 relative bg-cover bg-center"
@@ -160,6 +160,7 @@ export default function Catalog() {
             )}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

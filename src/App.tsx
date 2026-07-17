@@ -10,7 +10,7 @@ import Checkout from "./pages/Checkout";
 import Tracking from "./pages/Tracking";
 import NotFound from "./pages/NotFound";
 
-// FoodHub: Delivery website with product catalog, shopping cart, checkout, and real-time package tracking
+// FoodHub: Delivery website with product catalog, shopping cart, checkout, and real-time package tracking with beautiful delivery backgrounds
 const queryClient = new QueryClient();
 
 const App = () => (
